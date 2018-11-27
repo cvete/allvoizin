@@ -1,0 +1,45 @@
+[ 
+	{
+   	"email" : "maceski.cvete@gmail.com", 
+  	"password":"123456", 
+  	"nom": "Maceski", 
+  	"prenom" : "Cvete", 
+  	"role" : "particulier",
+	"ville" : "Montpellier", 
+	"adresse" : "72 rue Joseph Kessel", 
+	"tel":"0101010101"
+	},
+
+	{
+   	"email" : "loic@gmail.com", 
+  	"password":"123456", 
+  	"nom": "Fortin", 
+  	"prenom" : "Loic", 
+  	"role" : "particulier",
+	"ville" : "Montpellier", 
+	"adresse" : "1 rue Alibaba", 
+	"tel":"0201020102"
+	},
+
+	{
+   	"email" : "boyan@gmail.com", 
+  	"password":"123456", 
+  	"nom": "Maceski", 
+  	"prenom" : "Boyan", 
+  	"role" : "commercant",
+	"ville" : "Paris", 
+	"adresse" : "10 rue Boutonnet", 
+	"tel":"0606060606"
+	},
+
+ 	{
+ 	"email": "thao.thao@gmail.com", 
+ 	"password" :"123456", 
+ 	"nom": "Nguyen", 
+ 	"prenom" : "Thao", 
+ 	"role" : "particulier",
+ 	"ville" : "Nice", 
+ 	"adresse" : "72 rue Albert 1er", 
+ 	"tel" : "0707070707"
+ 	}
+]

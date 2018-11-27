@@ -1,0 +1,30 @@
+[ 
+	{
+   	"idService" : 1,  
+  	"titre": "  Cherche Assistance informatique  ", 
+  	"descriptif": "Bonjour, J'aurais besoin d'un informaticien pour m'aider à nettoyer les scories figurant sur mon ordinateur", 
+  	"lienPhoto":"pc.png",
+	"prix":30, 
+	"email" : "maceski.cvete@gmail.com"
+	},
+
+	{
+   	"idService" : 2,  
+  	"titre": " Bricolage - Petits travaux ", 
+  	"descriptif": "Bonjour, Je propose mes service de Bricolage .", 
+  	"lienPhoto":"travaux.png",
+	"prix":100, 
+	"email" : "thao.thao@gmail.com"
+	},
+
+	{
+   	"idService" : 3,  
+  	"titre": "Cherche Réparation voiture", 
+  	"descriptif": " Bonjour, ma voiture (Peugeot 306) ne démarre plus et j'aurais besoin d'avoir un diagnostique/devis.", 
+  	"lienPhoto":"voiture.png",
+	"prix": 50, 
+	"email" : "maceski.cvete@gmail.com"
+	}
+
+ 	
+]

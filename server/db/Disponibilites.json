@@ -1,0 +1,17 @@
+[{
+		"idDisponibilite": 1,
+		"bienOuService": "Service",
+		"idBienouService": 2,
+		"nulSemaine": 10,
+		"numJour": 20
+	},
+
+	{
+		"idDisponibilite": 1,
+		"bienOuService": "Service",
+		"idBienouService": 2,
+		"nulSemaine": 10,
+		"numJour": 20
+	}
+
+]

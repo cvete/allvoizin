@@ -1,0 +1,1 @@
+curl --header "Content-type: application/json" -X POST --data '{"email" : "tom.tomson@gmail.com","password":"123456","nom": "Tomson", "prenom": "Tom", "role":"particulier", "ville":"Montpellier", "adresse":"72 rue Joseph Kessel","tel":"0606060606"}' localhost:3000/membre

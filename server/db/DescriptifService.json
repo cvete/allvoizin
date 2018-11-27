@@ -1,0 +1,24 @@
+[
+
+{
+	"idService": 1,
+	"motClef" :["informatique","assistance", "reparation", "pc"]
+
+},
+
+
+{
+	"idService": 2,
+	"motClef" :["bricolage","travaux",  "pc"]
+
+},
+
+{
+
+	"idService": 3,
+	"motClef" :["reparation","voiture", "peugeot" , "306"]
+
+
+}
+
+]

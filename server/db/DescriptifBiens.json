@@ -1,0 +1,16 @@
+[ 
+	{
+	   	"idBien" : 1, 
+	  	"motClef":["Pistolet a peinture","Pistolet","peinture"] 
+	},
+
+ 	{
+	   	"idBien" : 2, 
+	  	"motClef":["machine a laver","machine","laver"] 
+	},
+
+	{
+	   	"idBien" : 3, 
+	  	"motClef":["PS4 pro","PS4","pro"] 
+	}
+]
