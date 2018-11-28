@@ -11,13 +11,16 @@ import { MembresService } from './liste-membres/membres.service';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { DemandesComponent } from './demandes/demandes.component';
+import { DemandesService } from './demandes/demandes.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListeMembresComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DemandesComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [MembresService],
+  providers: [MembresService,DemandesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

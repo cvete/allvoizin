@@ -5,11 +5,12 @@ var cors = require('cors');
 
 var index = require('./routes/index');
 var inscription = require('./routes/inscription');
+var demande = require('./routes/demande');
 
 var app = express();
 
 // Views Engine
-var port = '3001'
+var port = '3000'
 
 app.set('views', path.join(__dirname, 'views'));
 app.set ('view engine', 'ejs');
@@ -27,6 +28,7 @@ app.use(bodyParser.urlencoded({extended :false}));
 
 app.use('/', index);
 app.use('/', inscription);
+app.use('/', demande);
 
 app.listen( port, function()
 	{

@@ -4,7 +4,7 @@
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarText">
-	  <ul class="navbar-nav mr-auto">
+	  <ul class="navbar-nav  mr-auto">
 		<li class="nav-item active">
 		  <a class="nav-link" routerLink="/liste-membres">Home <span class="sr-only">(current)</span></a>			
 		</li>
@@ -13,10 +13,14 @@
 		</li>
 		<li class="nav-item">
 		  <a class="nav-link" routerLink="/register">Register</a>
-		</li>
-	  </ul>
+		</li> 
+		<li class="nav-item" class="float-right">
+				<a class="nav-link" routerLink="/demandes">Toute les demandes</a>
+			</li>
+		</ul>
+		
 	  <span class="navbar-text">
-		Navbar text with an inline element
+			
 	  </span>
 	</div>
   </nav>
@@ -27,7 +31,7 @@
 <router-outlet></router-outlet>
 
 
-<app-liste-membres >    </app-liste-membres>
+<app-liste-membres *ngIf="isAvailable" >   </app-liste-membres>
 
  
 

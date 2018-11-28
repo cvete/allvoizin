@@ -9,7 +9,7 @@ export class MembresService {
 
    getMembres(): Observable<any> {
      let observable: Observable<any>;
-     observable =  this.http.get("http://localhost:3001/inscription");
+     observable =  this.http.get("http://localhost:3000/inscription");
      console.log(observable);
      return observable;
   }
