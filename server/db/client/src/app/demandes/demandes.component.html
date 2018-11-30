@@ -34,15 +34,15 @@
       
         <div class="col-8">
     
-                      <div   class="card"  *ngFor="let bien of biens" >
+                      <div   class="card"  *ngFor="let soub of serviceoubien" >
                       <div class="card-header">
-                      {{bien.email}}
+                      {{soub.email}}
                       </div>
                       <div class="card-body">
-                      <h5 class="card-title">{{bien.titre}}</h5>
-                      <p class="card-text">{{bien.descriptif}}</p>
-                      <p  class="card-text" class="text-success">Prix : <b >{{bien.prix}}</b></p>
-                      <a routerLink="./{{bien._id}}" class="btn btn-success">Acceder</a>
+                      <h5 class="card-title">{{soub.titre}}</h5>
+                      <p class="card-text">{{soub.descriptif}}</p>
+                      <p  class="card-text" class="text-success">Prix : <b >{{soub.prix}}</b></p>
+                      <a routerLink="./{{soub._id}}" class="btn btn-success">Acceder</a>
                        </div>
                       </div>
     

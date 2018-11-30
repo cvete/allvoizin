@@ -33,7 +33,25 @@ router.get('/inscription', function(req , res, next)
 	    res.setHeader("Content-type", "application/json");
 	    res.end(JSON.stringify(json));
 	});
+	});
+	
+	router.get('/login', function(req , res, next)
+
+   {
+
+ // Get All users
+
+        db.collection("Membres").find().toArray((err, documents)=> {
+	    let json = [];
+            for (let doc of documents) {
+                console.log(doc);
+		json.push(doc);
+            }
+	    res.setHeader("Content-type", "application/json");
+	    res.end(JSON.stringify(json));
+	});
     });
+
 
 
 //POST method
