@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DemandesService } from './demandes.service';
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'app-demandes',
@@ -8,7 +9,7 @@ import { DemandesService } from './demandes.service';
 })
 export class DemandesComponent implements OnInit {
 
-  constructor(private service: DemandesService) { }
+  constructor(private router: Router, private service: DemandesService) { }
 
   private biens: Object[];
 
@@ -18,4 +19,13 @@ export class DemandesComponent implements OnInit {
   // this.service.getBiens().subscribe(id => {this.biens = id});
    
   }
+
+  onSelect(demande) {
+
+    this.router.navigate(['/demandes', demande.titre]);
+    
+
+  }
+
+
 }

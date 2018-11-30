@@ -34,7 +34,7 @@
       
         <div class="col-8">
     
-                      <div class="card"  *ngFor="let bien of biens" >
+                      <div   class="card"  *ngFor="let bien of biens" >
                       <div class="card-header">
                       {{bien.email}}
                       </div>
@@ -42,7 +42,7 @@
                       <h5 class="card-title">{{bien.titre}}</h5>
                       <p class="card-text">{{bien.descriptif}}</p>
                       <p  class="card-text" class="text-success">Prix : <b >{{bien.prix}}</b></p>
-                      <a href="#" class="btn btn-primary">Acceder</a>
+                      <a routerLink="./{{bien._id}}" class="btn btn-success">Acceder</a>
                        </div>
                       </div>
     

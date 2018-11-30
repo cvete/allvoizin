@@ -1,0 +1,47 @@
+
+<div class="container-fluid">
+  <br>
+
+  <div  class="alert alert-info" role="alert">
+    <h5> Detail de la demande </h5>
+    </div>
+
+    <div class="row">
+
+    <div class= "col-6">
+
+     
+        <div   class="card"  *ngFor="let unServ of Serv" >
+            <div class="card-header">
+            {{unServ.email}}
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">{{unServ.titre}}</h5>
+            <p class="card-text">{{unServ.descriptif}}</p>
+            <p  class="card-text" class="text-success">Prix : <b >{{unServ.prix}}</b></p>
+            <a routerLink="./{{Serv._id}}" class="btn btn-outline-primary">Poser une question</a>
+            &nbsp;&nbsp;<a routerLink="./{{Serv._id}}" class="btn btn-primary">Faire un proposition</a>
+             </div>
+            </div>
+
+
+      
+
+      </div>
+
+      <div class= "col-6">
+
+
+      Geolocalisation goes here!
+
+
+      </div>
+
+
+
+
+   </div>
+
+
+
+  </div>

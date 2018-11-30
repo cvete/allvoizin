@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DemandesComponent } from './demandes/demandes.component';
 import { DemandesService } from './demandes/demandes.service';
+import { DemandeDetailComponent } from './demande-detail/demande-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DemandesService } from './demandes/demandes.service';
     ListeMembresComponent,
     LoginComponent,
     RegisterComponent,
-    DemandesComponent
+    DemandesComponent,
+    DemandeDetailComponent
   ],
   imports: [
     BrowserModule,
