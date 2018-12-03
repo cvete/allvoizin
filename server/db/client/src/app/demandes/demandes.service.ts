@@ -11,7 +11,7 @@ export class DemandesService {
 
   getServicesOuBien(): Observable<any> {
     let observable: Observable<any>;
-    observable =  this.http.get("http://localhost:3000/demande/soub");
+    observable =  this.http.get("http://localhost:3003/demande/listedemande");
     console.log(observable);
     return observable;
  }

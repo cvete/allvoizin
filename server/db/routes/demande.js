@@ -56,13 +56,21 @@ router.get('/demande/bien', function(req , res, next)
 	 });
 	 });
 	
-router.get('/demande/service', function(req , res, next)
+router.get('/demande/listedemande', function(req , res, next)
 
    {
 
  // Get All users
-
-        db.collection("Service").find().toArray((err, documents)=> {
+ 	db.collection('ServiceOuBien').aggregate([
+    { $lookup:
+       {
+         from: 'Membres',
+         localField: 'email',
+         foreignField: 'email',
+         as: 'listedemandes'
+       }
+     }
+    ]).toArray((err, documents)=> {
 	    let json = [];
             for (let doc of documents) {
                 console.log(doc);
@@ -82,6 +90,7 @@ router.get('/demande/service', function(req , res, next)
         db.collection("ServiceOuBien").find().toArray((err, documents)=> {
 	    let json = [];
             for (let doc of documents) {
+				 
                 console.log(doc);
 		json.push(doc);
             }

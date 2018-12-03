@@ -50,6 +50,23 @@ router.get('/inscription', function(req , res, next)
 	    res.setHeader("Content-type", "application/json");
 	    res.end(JSON.stringify(json));
 	});
+	});
+	
+	router.get('/membre/:email', function(req , res, next)
+
+   {
+	let newemail = req.params.email;
+ // Get USER par son email
+
+        db.collection("Membres").find({email: newemail}).toArray((err, documents)=> {
+	    let json = [];
+            for (let doc of documents) {
+                console.log(doc);
+		json.push(doc);
+            }
+	    res.setHeader("Content-type", "application/json");
+	    res.end(JSON.stringify(json));
+	});
     });
 
 
