@@ -36,7 +36,7 @@
     
                       <div   class="card"  *ngFor="let soub of serviceoubien" >
                       <div class="card-header">
-                      <span *ngFor="let demande of soub.listedemandes">{{demande.nom}} {{demande.prenom}} </span>
+                      <span *ngFor="let demande of soub.listedemandes"><b>{{demande.nom}} {{demande.prenom}}</b> </span>
                       </div>
                       <div class="card-body">
                       <h5 class="card-title">{{soub.titre}}</h5>
@@ -45,7 +45,7 @@
                       <a routerLink="./{{soub._id}}" class="btn btn-success">Acceder</a>
                        </div>
                        <div class="card-footer bg-transparent border-success">
-                       <span *ngFor="let demande of soub.listedemandes">{{demande.ville}} </span>
+                       <span *ngFor="let demande of soub.listedemandes"> <i>ville</i> : {{demande.ville}} </span>
                       </div>
                       </div>
     

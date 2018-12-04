@@ -13,7 +13,7 @@ export class DemandeDetailService {
 
   getService(newid): Observable<any> {
     let observable: Observable<any>;
-    observable =  this.http.get("http://localhost:3000/demande/soub/" + newid);
+    observable =  this.http.get("http://localhost:3003/demande/listedemande/" + newid);
     console.log(observable);
     return observable;
  }

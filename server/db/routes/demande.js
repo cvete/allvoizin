@@ -60,7 +60,7 @@ router.get('/demande/listedemande', function(req , res, next)
 
    {
 
- // Get All users
+ // Get All user's demandes 
  	db.collection('ServiceOuBien').aggregate([
     { $lookup:
        {
@@ -70,6 +70,43 @@ router.get('/demande/listedemande', function(req , res, next)
          as: 'listedemandes'
        }
      }
+    ]).toArray((err, documents)=> {
+	    let json = [];
+            for (let doc of documents) {
+                console.log(doc);
+		json.push(doc);
+            }
+	    res.setHeader("Content-type", "application/json");
+	    res.end(JSON.stringify(json));
+	});
+	});
+
+
+	router.get('/demande/listedemande/:id', function(req , res, next)
+
+   {
+	   let newid = req.params.id;
+	   console.log(newid);
+
+ // Get All user's demandes 
+ 	db.collection('ServiceOuBien').aggregate([
+    
+	  { $lookup:
+			{
+			  from: 'Membres',
+			  localField: 'email',
+			  foreignField: 'email',
+			  as: 'listedemandedetail'
+			}
+		
+	 },
+	 
+	  { 
+		$match: {_id: ObjectId(newid)} 
+	
+	  }
+
+
     ]).toArray((err, documents)=> {
 	    let json = [];
             for (let doc of documents) {
