@@ -7,3 +7,4 @@ mongoimport --db dbsite --collection Utilisation --drop --file Utilisation.json 
 mongoimport --db dbsite --collection Disponibilites --drop --file Disponibilites.json --jsonArray
 mongoimport --db dbsite --collection DescriptifBiens --drop --file DescriptifBiens.json --jsonArray
 mongoimport --db dbsite --collection DescriptifService --drop --file DescriptifService.json --jsonArray
+mongoimport --db dbsite --collection ServiceOuBien --drop --file ServiceOuBien.json --jsonArray

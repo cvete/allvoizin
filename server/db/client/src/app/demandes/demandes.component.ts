@@ -11,13 +11,13 @@ export class DemandesComponent implements OnInit {
 
   constructor(private router: Router, private service: DemandesService) { }
 
-  private biens: Object[];
-
+  private serviceoubien: Object[];
+  private userparemail: Object[];
+  
 
   ngOnInit() {
-    this.service.getServices().subscribe(id=> {this.biens = id});
-  // this.service.getBiens().subscribe(id => {this.biens = id});
-   
+    this.service.getServicesOuBien().subscribe(id=> {this.serviceoubien = id});
+
   }
 
   onSelect(demande) {
@@ -26,6 +26,9 @@ export class DemandesComponent implements OnInit {
     
 
   }
+
+  
+
 
 
 }

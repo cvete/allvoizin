@@ -37,7 +37,7 @@ router.get('/demande/bien', function(req , res, next)
 	});
 	});
 	
-	router.get('/demande/service/:id', function(req , res, next)
+	router.get('/demande/soub/:id', function(req , res, next)
 
 	{
  
@@ -45,7 +45,7 @@ router.get('/demande/bien', function(req , res, next)
 
        let newid = req.params.id;
  
-		 db.collection("Service").find({"_id": ObjectId(newid)}).toArray((err, documents)=> {
+		 db.collection("ServiceOuBien").find({"_id": ObjectId(newid)}).toArray((err, documents)=> {
 		 let json = [];
 			 for (let doc of documents) {
 				 console.log(doc);
@@ -56,15 +56,78 @@ router.get('/demande/bien', function(req , res, next)
 	 });
 	 });
 	
-router.get('/demande/service', function(req , res, next)
+router.get('/demande/listedemande', function(req , res, next)
 
    {
 
- // Get All users
-
-        db.collection("Service").find().toArray((err, documents)=> {
+ // Get All user's demandes 
+ 	db.collection('ServiceOuBien').aggregate([
+    { $lookup:
+       {
+         from: 'Membres',
+         localField: 'email',
+         foreignField: 'email',
+         as: 'listedemandes'
+       }
+     }
+    ]).toArray((err, documents)=> {
 	    let json = [];
             for (let doc of documents) {
+                console.log(doc);
+		json.push(doc);
+            }
+	    res.setHeader("Content-type", "application/json");
+	    res.end(JSON.stringify(json));
+	});
+	});
+
+
+	router.get('/demande/listedemande/:id', function(req , res, next)
+
+   {
+	   let newid = req.params.id;
+	   console.log(newid);
+
+ // Get All user's demandes 
+ 	db.collection('ServiceOuBien').aggregate([
+    
+	  { $lookup:
+			{
+			  from: 'Membres',
+			  localField: 'email',
+			  foreignField: 'email',
+			  as: 'listedemandedetail'
+			}
+		
+	 },
+	 
+	  { 
+		$match: {_id: ObjectId(newid)} 
+	
+	  }
+
+
+    ]).toArray((err, documents)=> {
+	    let json = [];
+            for (let doc of documents) {
+                console.log(doc);
+		json.push(doc);
+            }
+	    res.setHeader("Content-type", "application/json");
+	    res.end(JSON.stringify(json));
+	});
+	});
+	
+	router.get('/demande/soub', function(req , res, next)
+
+   {
+
+ // Get All demandes (service et bien)
+
+        db.collection("ServiceOuBien").find().toArray((err, documents)=> {
+	    let json = [];
+            for (let doc of documents) {
+				 
                 console.log(doc);
 		json.push(doc);
             }

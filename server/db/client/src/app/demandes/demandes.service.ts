@@ -7,16 +7,11 @@ import {Observable} from 'rxjs';
 export class DemandesService {
   constructor(private http:HttpClient) { }
 
-   getBiens(): Observable<any> {
-     let observable: Observable<any>;
-     observable =  this.http.get("http://localhost:3000/demande/bien");
-     console.log(observable);
-     return observable;
-  }
+ 
 
-  getServices(): Observable<any> {
+  getServicesOuBien(): Observable<any> {
     let observable: Observable<any>;
-    observable =  this.http.get("http://localhost:3000/demande/service");
+    observable =  this.http.get("http://localhost:3003/demande/listedemande");
     console.log(observable);
     return observable;
  }
