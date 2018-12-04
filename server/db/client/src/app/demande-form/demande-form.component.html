@@ -1,0 +1,112 @@
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div id="form_search">
+
+	<p id="leaseholder_search_title">De quoi avez-vous besoin ?</p>
+
+	<form id="leaseholder-search-form" method="post" accept-charset="utf-8">                                                                                                                    
+    <div id="form_block">
+      <div id="box_1_form" class="focus">
+				<div id="step_form_text_1" class="step_form_texts step_form_validated_green_bolded">1 - Vous demandez :</div>
+				<div id="radiocontainerdiv">
+					<div class="radiocontainer">
+						<input type="radio" title="J'ai besoin d'un objet" name="search_type" class="form_radio_object_or_service btn-grey btn" id="objet-btn" value="1" autocomplete="off">
+						<label class="obj_srv_btn_label" title="J'ai besoin d'un objet" for="objet-btn">Un objet</label>
+					</div>
+					<div class="radiocontainer">
+						<input type="radio" title="J'ai besoin d'un service" name="search_type" class="form_radio_object_or_service btn-grey btn" id="service-btn" value="4" autocomplete="off">
+						<label class="obj_srv_btn_label" title="J'ai besoin d'un service" for="service-btn">Un service</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="box_2_form">
+        <label id="step_form_text_2" class="step_form_texts">2 - Expliquez votre besoin à vos voisins :</label>
+        <textarea class="form-control" title="Décrivez votre besoin de manière détaillée" placeholder="Ex : J'ai besoin d'aide pour faire la vidange de ma voiture." id="form_description" maxlength="300" name="description" >
+        </textarea>
+
+				<div id="form_category_block" class="btn-block ">
+          <label id="form_category" class="step_form_texts">Choisissez une catégorie :</label>            
+					<select id="form_category" name="object" class="form-control">
+            <option value="1">Travaux</option>
+            <option value="2">Transport</option>
+            <option value="3">Aide aux devoirs</option>
+            <option value="4">Animaux</option>
+             <option value="5">Informatique et web</option>
+					</select>
+        </div>
+
+        <div class="searchType_day_budget">
+          <div class="object_selected">
+						<select name="purchase" id="form_object_select_search_type" class="form-control">
+							<option value="1">A louer</option>
+							<option value="3">A acheter</option>
+		  			</select>
+	  			</div>
+
+					<div class="object_selected form-inline">
+						<div id="form_object_budget_and_duration">
+							<label id="form_object_duration_label" class="form_object_duration_label" for="duration">
+								Durée <input type="text" class="form-control object_duration only_number" id="form_object_duration">
+							</label>
+							<label class="label_budget" for="form_object_budget">
+                Budget <input type="text" class="form-control object_budget only_number" id="form_object_budget">
+              </label>
+						</div>
+					</div>
+
+					<div class="service_selected form-inline">
+						<select id="form_service_duration_type" class="form-control service_duration_type">
+							<option value="1">Budget à l'heure</option>
+							<option value="2">Budget par jour</option>
+							<option value="0">Budget global</option>
+              <option value="3">Sur devis</option>
+              <option value="4">Non rémunéré</option>
+						</select>
+							<label id="form_service_budget_label" for="form_service_budget">
+					  		<input type="text" class="form-control service_budget only_number" id="form_service_budget">
+						  		<span id="form_service_budget_euro"> € / heure</span>
+							</label>
+						<select id="form_service_budget_select" class="form-control">
+              <option value="10" >10 € / heure</option>
+              <option value="11" >11 € / heure</option>
+              <option value="12" >12 € / heure</option>
+              <option value="13" >13 € / heure</option>
+              <option value="14" >14 € / heure</option>
+              <option value="15" >15 € / heure</option>                
+              <option value="16" >16 € / heure</option>
+              <option value="17" >17 € / heure</option>
+              <option value="18" >18 € / heure</option>
+              <option value="19" >19 € / heure</option>
+              <option value="20" selected="selected">20 € / heure</option>
+              <option value="21" >21 € / heure</option>
+              <option value="22" >22 € / heure</option>
+              <option value="23" >23 € / heure</option>                
+              <option value="24" >24 € / heure</option>
+              <option value="25" >25 € / heure</option>
+              <option value="26" >26 € / heure</option>
+              <option value="27" >27 € / heure</option>
+              <option value="28" >28 € / heure</option>
+              <option value="29" >29 € / heure</option>
+              <option value="30" >30 € / heure</option>
+						</select>
+          </div>
+        </div>
+			</div>
+
+      <div id="box_3_form">
+        <label id="step_form_text_3" class="step_form_texts">3 - Où en avez-vous besoin ?</label>
+					<div class="input-group btn-block">
+            <input type="text" title="Adresse" class="input_text form-control" placeholder="Adresse complète" id="form_address" name="address" autocomplete="off"/>
+          </div>
+        </div>
+      </div>
+
+			<div id="merge_sub" >
+				<p class="leaseholder_search_form_submit">
+					<button id="leaseholder_form_submit" type="submit" class="btn form_post_asking_tracked_ga btn--green">Demander à mes voisins</button>
+				</p>
+      </div>
+  </form>
+</div>

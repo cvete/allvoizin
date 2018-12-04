@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { DemandesComponent } from './demandes/demandes.component';
 import { DemandesService } from './demandes/demandes.service';
 import { DemandeDetailComponent } from './demande-detail/demande-detail.component';
+import { DemandeFormComponent } from './demande-form/demande-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DemandeDetailComponent } from './demande-detail/demande-detail.componen
     LoginComponent,
     RegisterComponent,
     DemandesComponent,
-    DemandeDetailComponent
+    DemandeDetailComponent,
+    DemandeFormComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
-import { ListeMembresComponent } from './liste-membres/liste-membres.component';
+import { DemandeFormComponent } from './demande-form/demande-form.component';
 import { DemandesComponent } from './demandes/demandes.component';
 import  { DemandeDetailComponent } from './demande-detail/demande-detail.component';
 
@@ -11,7 +11,7 @@ import  { DemandeDetailComponent } from './demande-detail/demande-detail.compone
 const routes : Routes = [
 
   {path: 'login', component : LoginComponent},
-  {path: 'liste-membres', component : ListeMembresComponent},
+  {path: 'demande-form', component : DemandeFormComponent},
   {path: 'demandes', component : DemandesComponent},
   {path: 'demandes/:_id', component : DemandeDetailComponent},
   {path : 'register', component : RegisterComponent}
