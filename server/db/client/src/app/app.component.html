@@ -17,7 +17,10 @@
 		</ul>
 		
 	  <span class="navbar-text">
-			
+			<div *ngIf="isLoggedIn">
+				Bonjour {{mail}}! 
+			 
+			</div>
 	  </span>
 	</div>
   </nav>

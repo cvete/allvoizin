@@ -15,6 +15,8 @@ import { DemandesComponent } from './demandes/demandes.component';
 import { DemandesService } from './demandes/demandes.service';
 import { DemandeDetailComponent } from './demande-detail/demande-detail.component';
 import { DemandeFormComponent } from './demande-form/demande-form.component';
+import { UserService } from './user.service';
+import { LoginService } from './login/login.service';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,12 @@ import { DemandeFormComponent } from './demande-form/demande-form.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     CommonModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [MembresService,DemandesService],
+  providers: [MembresService,DemandesService,UserService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
