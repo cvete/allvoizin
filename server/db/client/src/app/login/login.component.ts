@@ -41,13 +41,9 @@ export class LoginComponent implements OnInit {
           this.isLoggedIn = true;
           
          
-         // this.router.navigate(['/demandes']);
+          this.router.navigate(['/profile']);
         }else {
-         // this.msgs = [];
-         // this.msgs.push({
-          //  severity: 'error',
-           // summary: 'Erreur d\'authentification',
-           // detail: 'Vérifiez que votre adresse mail et votre mot de passe sont valides'
+         
            console.log("we are NOT connected");
           
         }

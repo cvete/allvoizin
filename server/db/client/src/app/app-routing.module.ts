@@ -6,6 +6,7 @@ import {RegisterComponent} from './register/register.component';
 import { DemandeFormComponent } from './demande-form/demande-form.component';
 import { DemandesComponent } from './demandes/demandes.component';
 import  { DemandeDetailComponent } from './demande-detail/demande-detail.component';
+import {ProfileComponent} from './profile/profile.component';
 
 
 const routes : Routes = [
@@ -14,6 +15,7 @@ const routes : Routes = [
   {path: 'demande-form', component : DemandeFormComponent},
   {path: 'demandes', component : DemandesComponent},
   {path: 'demandes/:_id', component : DemandeDetailComponent},
+  {path: 'profile', component : ProfileComponent},
   {path : 'register', component : RegisterComponent}
 
 ];
