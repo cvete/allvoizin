@@ -2,6 +2,7 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from './login.service';
 import { environment } from '../../environments/environment';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 
 
@@ -38,6 +39,7 @@ export class LoginComponent implements OnInit {
         if (res[0]) {
           console.log("we are connected");
           this.isLoggedIn = true;
+          
          
          // this.router.navigate(['/demandes']);
         }else {

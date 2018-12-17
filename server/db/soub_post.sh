@@ -1,0 +1,1 @@
+curl --header "Content-type: application/json" -X POST --data '{ "titre": " Cherche TV ", "descriptif": " Bonjour, je cherche à acheter un Xbox One", "prix":210, "SouB":"bien" , "email" : "user2@user.com"}' localhost:3003/demande/create

@@ -13,6 +13,35 @@ var ObjectId = require('mongodb').ObjectID;
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017";
 
+// Creation d'un Bien ou Service
+
+function createSouB(db, param, callback){
+	db.collection("ServiceOuBien").insertOne(param["filterObject"], function(err, doc) {
+		if(err) {
+			console.log(param);	
+			callback('echec', []);
+		}
+		else {
+			console.log(param);
+			callback('succes', doc);
+		}
+	});
+}
+
+// Supression d'un Service ou Bien
+function deleteDemande(db, param, callback){
+	db.collection("ServiceOuBien").deleteOne(param["filterObject"]).toArray(function(err, doc){
+		if(err)
+			callback(err, []);	
+		else if (doc !== undefined)
+			callback(param["message"], doc);
+		else
+			callback(param["message"], []);
+	});
+}
+
+
+
 MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     let db = client.db("dbsite");
     assert.equal(null, err);
@@ -157,12 +186,42 @@ router.post('/bien', (req , res, next)=>{
 	catch(e) {
 	    res.end("Error "+e);
 	}
-    
-
   });
 
+  // creation de Service Ou Bien
+	router.post("/demande/create", function (req, res) {
+		
+		if(!req.body){
+		  return res.sendStatus(400);
+		}
 
+		console.log(req.body);
+		let newDemande = {
+		  "titre" : req.body.titre,
+		  "descriptif" : req.body.descriptif,
+		  "prix" : req.body.prix,
+		  "SouB" : req.body.SouB,
+		  "email" : req.body.email
+	};
+	console.log(newDemande);
+	createSouB(db, {"message" : "/demande/create", "filterObject" : newDemande}, function(step,results){
+		res.setHeader("Content-type","application/json; charset = UTF-8");
+		let json = JSON.stringify(results);
+		console.log(json);
+		//res.send(step);
+		res.end(json);
+	});
+    });
+  
+	router.get("/demande/delete/:id",function(req,res){
 
+		console.log(req.params.id);
+		deleteDemande(db,{"message" : "/demande/delete", "filterObject" : ObjectId(req.params.id)},function(step,results){
+			res.setHeader("Content-type","application/json; charset = UTF-8");
+			let json = JSON.stringify(results);
+			res.end(json);
+		});
+	});
 
 
 });
