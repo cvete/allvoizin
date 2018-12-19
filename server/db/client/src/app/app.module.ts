@@ -18,6 +18,9 @@ import { DemandeFormComponent } from './demande-form/demande-form.component';
 import { UserService } from './user.service';
 import { LoginService } from './login/login.service';
 import { ProfileComponent } from './profile/profile.component';
+import { GeolocComponent } from './demande-detail/geoloc/geoloc.component';
+import {HttpClient} from '@angular/common/http'; 
+import {AgmCoreModule} from '@agm/core';  
 
 @NgModule({
   declarations: [
@@ -28,13 +31,17 @@ import { ProfileComponent } from './profile/profile.component';
     DemandesComponent,
     DemandeDetailComponent,
     DemandeFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    GeolocComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
     HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCjb1tKg0aiL5s8OaP464tT4y5fWI9QeSs'
+    }),
     AppRoutingModule
   ],
   providers: [MembresService,DemandesService,UserService, LoginService],

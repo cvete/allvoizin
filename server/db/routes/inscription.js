@@ -6,7 +6,7 @@ var assert = require("assert");
 router.use(express.json());
 router.use(express.urlencoded({extended:true}));
 
-//var db = mongojs('mongodb://localhost:27017/dbsite', ['Membres'] );
+
 
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017";
@@ -68,13 +68,14 @@ router.get('/inscription', function(req , res, next)
 	    res.end(JSON.stringify(json));
 	});
 	});
+
+	// Get USER par son email
 	
 	router.get('/membre/:email', function(req , res, next)
 
    {
 	let newemail = req.params.email;
- // Get USER par son email
-
+ 
         db.collection("Membres").find({email: newemail}).toArray((err, documents)=> {
 	    let json = [];
             for (let doc of documents) {

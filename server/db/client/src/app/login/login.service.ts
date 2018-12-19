@@ -11,9 +11,9 @@ export class LoginService {
 
     baseUrl = "http://localhost:3003";
     
-    @Output() change: EventEmitter<null> = new EventEmitter();
+    //@Output() change: EventEmitter<null> = new EventEmitter();
 
-    subject: Subject<Observable<any>> = new Subject(); //générateur d'evenements pour AuthComponent
+    subject: Subject<Observable<any>> = new Subject(); 
     
     constructor(private http: HttpClient) {}
 

@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router, private loginService : LoginService) { }
 
-
+ newProfil : any;
 
   ngOnInit() {
    
@@ -39,9 +39,10 @@ export class LoginComponent implements OnInit {
         if (res[0]) {
           console.log("we are connected");
           this.isLoggedIn = true;
-          
+          this.newProfil = res[0];
+          console.log(this.newProfil);
          
-          this.router.navigate(['/profile']);
+         // this.router.navigate(['/profile']);
         }else {
          
            console.log("we are NOT connected");
